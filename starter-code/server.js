@@ -135,7 +135,7 @@ app.delete('/articles', function(request, response) {
 });
 
 // COMMENT DONE: What is this function invocation doing?
-// This function is loading our database.
+// When loadDB() is invoked, it checks if a table with all the data already exists. If there isn't, it creates a new articles table, then it calls loadArticles() to insert the JSON data.
 loadDB();
 
 app.listen(PORT, function() {
